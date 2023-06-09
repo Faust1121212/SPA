@@ -355,7 +355,7 @@ let productionApi=new ApiService('http://46.101.212.120/js-course/api.php');
 let factoryApi=new ApiService('http://46.101.212.120/js-course/api.php');
 //ініціація списку підприємств
 let factoryList=new FactoryList();
-fetch('http://localhost/JS/data/factory.json').then(function(response){
+fetch('https://faust1121212.github.io/SPA/factory.json').then(function(response){
 	response.json().then( function(data){
         for(let i=0;i<data.factory.length;i++){
             let factoryId=factoryList.addFactory(data.factory[i].name,data.factory[i].numberOFemployees,data.factory[i].kindOFactivities);
@@ -382,3 +382,4 @@ fetch('http://localhost/JS/data/provision.json').then(function(response){
         provisionList.displayProvisionListToConsole();
 	} );
 });
+factoryApi.postApiData()
